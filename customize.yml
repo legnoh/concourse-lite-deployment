@@ -1,11 +1,18 @@
 # change to f1-micro
 - type: replace
-  path: /resource_pools/name=vms/cloud_properties?
-  value:
-    machine_type: f1-micro
+  path: /resource_pools/name=vms/cloud_properties/machine_type?
+  value: f1-micro
 
 # change 8080 to 80
 - type: replace
-  path: /instance_groups/name=concourse/jobs/name=atc/propaties?
-  value:
-    external_url: http://((public_ip))
+  path: /instance_groups/name=concourse/jobs/name=atc/properties/external_url?
+  value: http://((public_ip))
+
+# add basic auth
+- type: replace
+  path: /instance_groups/name=concourse/jobs/name=atc/properties/basic_auth_username?
+  value: ((atc_basic_auth.username))
+
+- type: replace
+  path: /instance_groups/name=concourse/jobs/name=atc/properties/basic_auth_password?
+  value: ((atc_basic_auth.password))
