@@ -150,7 +150,9 @@ Session.vim
 # Auto-generated tag files
 tags
 
+# for concourse-lite-deploy
 .envrc
-keys/*
+keys/*_key
+keys/*.pub
 *-state.json
 *-creds.yml
