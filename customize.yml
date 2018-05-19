@@ -1,12 +1,10 @@
-# change to f1-micro
-- type: replace
-  path: /resource_pools/name=vms/cloud_properties/machine_type?
-  value: f1-micro
-
 # change 8080 to 80
 - type: replace
   path: /instance_groups/name=concourse/jobs/name=atc/properties/external_url?
-  value: http://((public_ip))
+  value: http://concourse.pf.lkj.io
+- type: replace
+  path: /instance_groups/name=concourse/jobs/name=atc/properties/bind_port?
+  value: 80
 
 # add basic auth
 - type: replace
