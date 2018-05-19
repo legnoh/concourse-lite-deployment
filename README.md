@@ -26,8 +26,5 @@ $ bosh create-env concourse-bosh-deployment/lite/concourse.yml \
        -v zone=$ZONE \
        --var-file gcp_credentials_json=gcp-state.json
 
-$ fly -t m l -c http://$PUBLIC_IP \
-&& fly -t m s \
-&& fly -t m st -n main --non-interactive \
-   --basic-auth-username=$MAIN_USER --basic-auth-password=$MAIN_PASSWORD
+$ fly -t m l -c http://$PUBLIC_IP && fly -t m s
 ```
