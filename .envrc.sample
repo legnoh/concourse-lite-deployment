@@ -1,0 +1,8 @@
+export REGION=us-central1
+export ZONE=us-central1-a
+export PROJECT_ID=
+export PUBLIC_IP=
+export POSTGRES_PASSWORD=
+export MBUS_BOOTSTRAP_PASSWORD=
+export MAIN_USER=
+export MAIN_PASSWORD=

@@ -1,0 +1,11 @@
+# change to f1-micro
+- type: replace
+  path: /resource_pools/name=vms/cloud_properties?
+  value:
+    machine_type: f1-micro
+
+# change 8080 to 80
+- type: replace
+  path: /instance_groups/name=concourse/jobs/name=atc/propaties?
+  value:
+    external_url: http://((public_ip))
