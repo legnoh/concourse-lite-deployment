@@ -1,8 +1,3 @@
-# change atc external_url
-- type: replace
-  path: /instance_groups/name=concourse/jobs/name=atc/properties/external_url?
-  value: http://concourse.pf.lkj.io:8080
-
 # add basic auth
 - type: replace
   path: /instance_groups/name=concourse/jobs/name=atc/properties/basic_auth_username?
