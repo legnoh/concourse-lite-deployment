@@ -1,8 +1,3 @@
-# change to f1-micro
-- type: replace
-  path: /resource_pools/name=vms/cloud_properties/machine_type?
-  value: f1-micro
-
 # change atc external_url
 - type: replace
   path: /instance_groups/name=concourse/jobs/name=atc/properties/external_url?
