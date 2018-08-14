@@ -1,8 +1,17 @@
-# add basic auth
 - type: replace
-  path: /instance_groups/name=concourse/jobs/name=atc/properties/basic_auth_username?
-  value: ((atc_basic_auth.username))
+  path: /instance_groups/name=concourse/jobs/name=atc/properties/github_auth?
+  value:
+    client_id: ((github_client.username))
+    client_secret: ((github_client.password))
 
 - type: replace
-  path: /instance_groups/name=concourse/jobs/name=atc/properties/basic_auth_password?
-  value: ((atc_basic_auth.password))
+  path: /instance_groups/name=concourse/jobs/name=atc/properties/main_team?/auth/github/users
+  value: ((main_team.github_users))
+
+- type: replace
+  path: /instance_groups/name=concourse/jobs/name=atc/properties/bind_port?
+  value: ((concourse_port))
+
+- type: replace
+  path: /instance_groups/name=concourse/jobs/name=atc/properties/external_url
+  value: ((concourse_url))
