@@ -8,6 +8,17 @@
   path: /instance_groups/name=concourse/jobs/name=atc/properties/main_team?/auth/github/users
   value: ((main_team.github_users))
 
+# - type: replace
+#   path: /instance_groups/name=concourse/jobs/name=atc/properties/generic_oidc?
+#   value:
+#     client_id: ((generic_oidc.client_id))
+#     client_secret: ((generic_oidc.client_secret))
+#     display_name: ((generic_oidc.display_name))
+#     issuer: ((generic_oidc.issuer))
+# - type: replace
+#   path: /instance_groups/name=concourse/jobs/name=atc/properties/main_team?/auth/oidc/groups
+#   value: ((main_team.oidc_groups))
+
 - type: replace
   path: /instance_groups/name=concourse/jobs/name=tsa/properties/atc?/urls
   value: [http://127.0.0.1:((concourse_port))]
